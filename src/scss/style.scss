@@ -328,6 +328,7 @@ body {
     color: $blk;
     text-shadow: 1px 1px 0 rgba($lht, 0.25);
     letter-spacing: 0.05em;
+    user-select: none;
   }
   &--infos {
     padding-top: 5px;
