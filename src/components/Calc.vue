@@ -323,6 +323,9 @@ export default {
   methods: {
     setLevel: function (e) {
       this.$router.push({ name: 'Home', params: { level: e.target.value } })
+      document.title = `Вложение :: ${
+        this.$store.state.gbs[this.currentGB].name
+      } — ${this.$route.params.level}`
     },
     calcRatedValue: function (revard) {
       this.position_1 = {
@@ -350,7 +353,9 @@ export default {
       this.$router.push({ name: 'Home', params: { building: key } })
       this.owner = 0
       this.calcRatedValue(this.priceGB.reward)
-      document.title = `Вложение ${this.$store.state.gbs[this.currentGB].name}`
+      document.title = `Вложение :: ${
+        this.$store.state.gbs[this.currentGB].name
+      } — ${this.$route.params.level}`
     },
   },
   watch: {
@@ -364,6 +369,11 @@ export default {
       this.owner = 0
       this.calcRatedValue(this.priceGB.reward)
     },
+  },
+  mounted: function () {
+    document.title = `Вложение :: ${
+      this.$store.state.gbs[this.currentGB].name
+    } — ${this.$route.params.level}`
   },
 }
 </script>
