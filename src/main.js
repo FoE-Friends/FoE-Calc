@@ -5,7 +5,7 @@ import Calc from './components/Calc.vue'
 import store from './store'
 
 const routes = [{ name: 'Home', path: '/:building/:level', component: Calc }]
-const router = new VueRouter({ mode: 'history', routes })
+const router = new VueRouter({ /*mode: 'history',*/ routes })
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
