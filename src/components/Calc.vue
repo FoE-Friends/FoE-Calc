@@ -204,7 +204,7 @@ export default {
       return this.$store.state.gbsLevels[this.currentGB].levels[this.level]
     },
     previewGB: function () {
-      return `../assets/gbs_images/${this.currentGB}.png`
+      return `assets/gbs_images/${this.currentGB}.png`
     },
     guaranteeStatus_1: function () {
       if (this.position_1.status) {
