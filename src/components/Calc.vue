@@ -374,6 +374,8 @@ export default {
     document.title = `Вложение :: ${
       this.$store.state.gbs[this.currentGB].name
     } — ${this.$route.params.level}`
+
+    this.calcRatedValue(this.priceGB.reward)
   },
 }
 </script>
